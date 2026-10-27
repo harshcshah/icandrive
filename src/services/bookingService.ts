@@ -125,8 +125,8 @@ export const BookingService = {
           const eM = eMin % 60;
 
           const pad = (n: number) => String(n).padStart(2, '0');
-          const startIso = `${dateStr}T${pad(sH)}:${pad(sM)}:00.000Z`;
-          const endIso = `${dateStr}T${pad(eH)}:${pad(eM)}:00.000Z`;
+          const startIso = `${dateStr}T${pad(sH)}:${pad(sM)}:00+05:30`;
+          const endIso = `${dateStr}T${pad(eH)}:${pad(eM)}:00+05:30`;
 
           // Format display time
           const format12H = (h: number, m: number) => {
@@ -270,7 +270,7 @@ export const BookingService = {
       ends_at: params.endsAt,
       status: 'pending_payment',
       hold_expires_at: holdExpiresAt,
-      amount_inr: pkg.price_inr,
+      amount_inr: Math.round(pkg.price_inr / pkg.lesson_count),
       pickup_from_home: params.pickupFromHome,
       pickup_address: params.pickupAddress,
       created_at: new Date().toISOString(),

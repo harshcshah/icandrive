@@ -242,7 +242,7 @@ export const CheckoutPage: React.FC = () => {
             <div className="pt-2 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-base font-black text-slate-900 dark:text-white">
               <span>{t('totalPayable')}</span>
               <span className="text-xl sm:text-2xl text-blue-600 dark:text-blue-400 font-black">
-                ₹{pkg.price_inr}
+                ₹{booking.amount_inr} <span className="text-sm font-semibold text-slate-500 dark:text-slate-400">per lesson</span>
               </span>
             </div>
           </div>
@@ -310,7 +310,7 @@ export const CheckoutPage: React.FC = () => {
             >
               <Lock className="w-4 h-4" />
               <span>
-                {processing ? t('loading') : t('simulateSuccess', { amount: pkg.price_inr })}
+                {processing ? t('loading') : t('simulateSuccess', { amount: booking.amount_inr })}
               </span>
             </button>
 
