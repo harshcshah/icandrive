@@ -1,0 +1,6 @@
+{
+  "name": "icandrive - Vadodara Driving Lessons Marketplace",
+  "description": "Book certified driving lessons across Vadodara at your pace. Flexible slots, verified instructors, dual-control cars & two-wheelers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
